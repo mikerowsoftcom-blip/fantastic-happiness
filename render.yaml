@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: llama-cpp-python
+    runtime: docker
+    plan: starter
+    healthCheckPath: /health
+    envVars:
+      - key: MODEL_PATH
+        value: /models/model.gguf
+      - key: N_CTX
+        value: "4096"
+      - key: N_THREADS
+        value: "2"
+      - key: N_BATCH
+        value: "256"
+      - key: N_GPU_LAYERS
+        value: "0"
+      - key: API_KEY
+        sync: false
+      - key: CORS_ORIGINS
+        sync: false
