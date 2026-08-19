@@ -1,0 +1,5 @@
+Place or mount your GGUF model so that the container can access it at:
+
+/models/model.gguf
+
+Do not commit the actual GGUF file to GitHub.
